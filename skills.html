@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Arsenal — Umang Raj | Skills &amp; Stack</title>
+  <meta name="description" content="Explore Umang Raj's technical arsenal: Programming languages, Frontend engineering, Data Science, AI/ML, and development tools.">
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portfolio-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- GLOBAL PERSISTENT NAVIGATION -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="Umang Raj Homepage">
+        <img src="logo.png" onerror="this.src='public/logo.png'" alt="Logo" class="nav-brand-logo">
+        <span>UMANG RAJ</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link active" aria-current="page">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav CTA & Mobile Toggle -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="about.html#resume" class="btn-nav-resume">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Resume
+        </a>
+        <button id="mobileToggle" class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="skills.html" class="nav-link active">Skills</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="about.html#resume" class="btn btn-secondary" style="margin-top: 0.5rem; justify-content: center;">View Resume</a>
+  </div>
+
+  <!-- MAIN SKILLS CONTENT -->
+  <main>
+    <div class="container">
+      
+      <!-- Page Header -->
+      <header class="page-header centered">
+        <div class="page-tag">Core Competencies</div>
+        <h1 class="page-title">Technical Arsenal</h1>
+        <p class="page-subtitle">
+          A specialized toolkit tailored for frontend engineering, data science, algorithm design, and modern web application development.
+        </p>
+        <div class="accent-line"></div>
+      </header>
+
+      <!-- Skills Grid -->
+      <div class="skills-grid">
+        
+        <!-- Category 1: Programming Languages -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h2 class="skill-cat-title">Languages</h2>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-pill">
+              <span>C++</span>
+              <span class="skill-pill-tag">DSA / Core</span>
+            </div>
+            <div class="skill-pill">
+              <span>Python</span>
+              <span class="skill-pill-tag">Data / AI</span>
+            </div>
+            <div class="skill-pill">
+              <span>JavaScript</span>
+              <span class="skill-pill-tag">ES6+</span>
+            </div>
+            <div class="skill-pill">
+              <span>TypeScript</span>
+              <span class="skill-pill-tag">Typed Web</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Frontend Engineering -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h2 class="skill-cat-title">Frontend</h2>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-pill">
+              <span>HTML5 / Semantic</span>
+              <span class="skill-pill-tag">Structure</span>
+            </div>
+            <div class="skill-pill">
+              <span>CSS3 / Flex &amp; Grid</span>
+              <span class="skill-pill-tag">Layouts</span>
+            </div>
+            <div class="skill-pill">
+              <span>React</span>
+              <span class="skill-pill-tag">SPA / Hooks</span>
+            </div>
+            <div class="skill-pill">
+              <span>Tailwind CSS</span>
+              <span class="skill-pill-tag">Utility UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Data & Intelligence -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h2 class="skill-cat-title">Data &amp; Tech</h2>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-pill">
+              <span>Data Science</span>
+              <span class="skill-pill-tag">Analysis</span>
+            </div>
+            <div class="skill-pill">
+              <span>AI / ML Concepts</span>
+              <span class="skill-pill-tag">Models</span>
+            </div>
+            <div class="skill-pill">
+              <span>Web Scraping</span>
+              <span class="skill-pill-tag">Crawlers</span>
+            </div>
+            <div class="skill-pill">
+              <span>Data Visualization</span>
+              <span class="skill-pill-tag">Metrics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Tools & Workflow -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h2 class="skill-cat-title">Tools &amp; DevOps</h2>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-pill">
+              <span>Git</span>
+              <span class="skill-pill-tag">VCS</span>
+            </div>
+            <div class="skill-pill">
+              <span>GitHub</span>
+              <span class="skill-pill-tag">Collaboration</span>
+            </div>
+            <div class="skill-pill">
+              <span>VS Code</span>
+              <span class="skill-pill-tag">IDE</span>
+            </div>
+            <div class="skill-pill">
+              <span>Vite &amp; NPM</span>
+              <span class="skill-pill-tag">Tooling</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Skill Architecture Banner -->
+      <section class="card" style="margin-top: 3.5rem; text-align: center; border-color: var(--border-hover);">
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Continuous Learning &amp; Adaptation</h3>
+        <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 1.5rem; line-height: 1.7;">
+          Actively exploring deep-learning fundamentals, full-stack cloud deployments, and progressive web application performance optimization.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="projects.html" class="btn btn-primary">See Skills In Action</a>
+          <a href="contact.html" class="btn btn-secondary">Discuss Tech Stack</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- GLOBAL PERSISTENT FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h3>Umang Raj</h3>
+          <p class="footer-bio">
+            Passionate computer science student building innovative web interfaces and data-driven applications.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/umangraj" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+            <a href="mailto:umangraj55163@gmail.com" class="social-btn" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="skills.html" class="footer-link">Skills</a></li>
+            <li><a href="projects.html" class="footer-link">Projects</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact Details</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Ranchi, Jharkhand, India</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:umangraj55163@gmail.com" class="footer-link">umangraj55163@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Umang Raj. All rights reserved.</p>
+        <a href="#" id="backToTop" class="back-to-top">
+          Back to top
+          <span class="back-to-top-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
