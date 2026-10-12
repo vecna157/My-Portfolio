@@ -7,6 +7,7 @@ export const portfolioData = {
     location: "Jaipur, Rajasthan, India",
     email: "umangraj55163@gmail.com",
     github: "https://github.com/umangraj03",
+    linkedin: "https://www.linkedin.com/in/rajumang03",
     resumeUrl: "/resume.pdf",
   },
   about: {

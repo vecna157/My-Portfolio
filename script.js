@@ -10,6 +10,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('themeToggle');
   const getTheme = () => document.documentElement.getAttribute('data-theme') || 'dark';
 
+  // Botpress Chat Button Dynamic Theme Synchronization
+  const syncBotpressTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const fabRoot = document.getElementById('fab-root');
+    if (!fabRoot || !fabRoot.shadowRoot) return false;
+
+    const sr = fabRoot.shadowRoot;
+    let styleTag = sr.getElementById('bp-custom-theme-style');
+    if (!styleTag) {
+      styleTag = document.createElement('style');
+      styleTag.id = 'bp-custom-theme-style';
+      sr.appendChild(styleTag);
+    }
+
+    if (currentTheme === 'dark') {
+      // In black/dark theme: button is white, icon is black
+      styleTag.textContent = `
+        .bpFabContainer {
+          background: #ffffff !important;
+          border: 1px solid rgba(255, 255, 255, 0.4) !important;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+          transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease !important;
+        }
+        .bpFabContainer:hover {
+          background: #e4e4e7 !important;
+          transform: scale(1.06) !important;
+          box-shadow: 0 10px 28px rgba(255, 255, 255, 0.2) !important;
+        }
+        .bpFabIcon {
+          background-color: #000000 !important;
+        }
+      `;
+    } else {
+      // In white/light theme: button is black, icon is white
+      styleTag.textContent = `
+        .bpFabContainer {
+          background: #000000 !important;
+          border: 1px solid rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+          transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease !important;
+        }
+        .bpFabContainer:hover {
+          background: #27272a !important;
+          transform: scale(1.06) !important;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+        }
+        .bpFabIcon {
+          background-color: #ffffff !important;
+        }
+      `;
+    }
+    return true;
+  };
+
   const applyTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('portfolio-theme', theme);
@@ -17,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
       themeToggle.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     }
+    syncBotpressTheme();
   };
 
   if (themeToggle) {
@@ -27,6 +82,24 @@ document.addEventListener('DOMContentLoaded', () => {
       applyTheme(next);
     });
   }
+
+  // Poll until Botpress FAB mounts, then apply theme
+  let bpPollCount = 0;
+  const bpPollInterval = setInterval(() => {
+    bpPollCount++;
+    if (syncBotpressTheme() || bpPollCount > 35) {
+      clearInterval(bpPollInterval);
+    }
+  }, 250);
+
+  // Observe theme changes on html element
+  const themeObserver = new MutationObserver(() => {
+    syncBotpressTheme();
+  });
+  themeObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
 
   // Mobile Nav Toggle
   const mobileToggle = document.getElementById('mobileToggle');

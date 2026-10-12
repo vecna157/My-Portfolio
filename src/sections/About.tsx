@@ -208,9 +208,9 @@ export function About() {
                             <h4 className="font-medium text-base text-foreground leading-snug">{cert.title || cert.name}</h4>
                           </div>
                         </div>
-                        {cert.url && (
+                        {'url' in cert && (cert as { url?: string }).url && (
                           <a 
-                            href={cert.url} 
+                            href={(cert as { url?: string }).url} 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="text-xs font-medium text-primary flex items-center gap-1 shrink-0 mt-1 hover:underline"
